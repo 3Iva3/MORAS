@@ -38,21 +38,22 @@ class Vint
 	  let temp = capacity; 
 	  let capacity = 1;
 	   
-	  if (~(m<0)){
+	  if (~(m<0))
+	  {
 	    while (m > 0)
-		{
-		  let capacity = capacity * 2;
-		  let m = m - 1;
-		}
-	    let Pom = Array.new(capacity);
-	    let i = 0;
-	    while(i < temp)
 	    {
-	      let Pom[i] = V[i];
-		  let i = i + 1;
+              let capacity = capacity * 2;
+	      let m = m - 1;
 	    }
-	    let V = Pom;  
 	  }
+	  let Pom = Array.new(capacity);
+	  let i = 0;
+	  while(i < temp)
+	  {
+	    let Pom[i] = V[i];
+	    let i = i + 1;
+	   }
+	  let V = Pom;  
 	  return;
 	}
 	
@@ -67,10 +68,10 @@ class Vint
 	  while(i < A.len())
 	  {
 	    if (~(A[i] = B[i]))
-		{
-		  return false;
-		}
-	   }
-	   return true;  
+	    {
+	      return false;
+	    }
+	  }
+	  return true;  
 	}	
 }
